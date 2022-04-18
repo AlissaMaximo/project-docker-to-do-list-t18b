@@ -1,5 +1,7 @@
 FROM node:alpine
 
-WORKDIR /docker
+WORKDIR /docker/todo-app/back-end
+
+RUN npm install
 
 COPY . .
