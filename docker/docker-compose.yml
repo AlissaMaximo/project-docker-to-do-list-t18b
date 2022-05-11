@@ -5,7 +5,7 @@ services:
   #   ports:
   #     - 3000:3000
   backend:
-    build: ./todo-app/back-end
+    # build: ./todo-app/back-end
     image: todobackend
     restart: on-failure
     ports:
@@ -13,4 +13,3 @@ services:
   # tests:
   #   ports:
   #     - 3000:3000
-  
