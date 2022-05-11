@@ -1,10 +1,9 @@
-FROM node:16-alpine
-
+FROM node:14-alpine
 WORKDIR /docker/todo-app/front-end
 
-RUN npm install
-
 COPY . .
+
+RUN npm install
 
 ADD node_modules.tar.gz .
 

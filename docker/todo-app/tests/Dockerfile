@@ -2,9 +2,9 @@ FROM node:16-alpine
 
 WORKDIR /docker/todo-app/tests
 
-RUN npm install
-
 COPY . .
+
+RUN npm install
 
 ADD node_modules.tar.gz .
 
