@@ -2,9 +2,9 @@ FROM node:14-alpine AS todobackend
 
 WORKDIR /docker/todo-app/back-end
 
-RUN npm install
-
 COPY . .
+
+RUN npm install
 
 ADD node_modules.tar.gz .
 
