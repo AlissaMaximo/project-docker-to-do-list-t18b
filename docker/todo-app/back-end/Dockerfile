@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:14-alpine AS todobackend
 
 WORKDIR /docker/todo-app/back-end
 
@@ -6,6 +6,8 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+ADD node_modules.tar.gz .
+
+EXPOSE 3001
 
 CMD npm start

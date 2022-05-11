@@ -1,16 +1,15 @@
 version: '3'
 services:
-  frontend:
-    image: win-x64
-    restart: on-failure
-    ports:
-      - 3000:3000
+  # frontend:
+  #   restart: on-failure
+  #   ports:
+  #     - 3000:3000
   backend:
-    image: win-x64
+    build: ./todo-app/back-end
+    image: todobackend
     restart: on-failure
     ports:
       - 3001:3001
-  tests:
-    image: win-x64
-    ports:
-      - 3000:3000
+  # tests:
+  #   ports:
+  #     - 3000:3000
